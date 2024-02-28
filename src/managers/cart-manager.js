@@ -1,6 +1,7 @@
-import fs from "fs/promises";
+//import fs from "fs/promises";
+const fs=require("fs")
 
-export class CartManager {
+ class CartManager {
   constructor(path) {
     this.path = path;
     this.loadCarts();
@@ -57,3 +58,5 @@ export class CartManager {
     await fs.writeFile(this.path, JSON.stringify(this.carts, null, 4));
   }
 }
+
+module.exports = CartManager;
