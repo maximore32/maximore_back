@@ -1,7 +1,7 @@
 //import fs from "fs/promises";
-const fs=require("fs")
+const fs=require("fs").promises
 
- class CartManager {
+  class CartManager {
   constructor(path) {
     this.path = path;
     this.loadCarts();

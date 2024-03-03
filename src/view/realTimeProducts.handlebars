@@ -1,0 +1,12 @@
+<h1>Home Page</h1>
+<br>
+<h2>Todos los productos</h2>
+<ol id="prodslista">
+    {{#each allprods}}
+        <li>Productos: <strong>{{title}}</strong> - Descripción: <i>{{description}}</i></li>
+    {{/each}}
+</ol>
+<a href="/home">Productos Originales</a>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/realTimProds.js"></script>

@@ -1,14 +1,15 @@
 const Router = require("express").Router;
 const ProductManager = require("../managers/index.js");
-const { saveDatos } = require("../varios");
 
-const { join } = require("path");
+
+//const { join } = require("path");
+const { rutaProds } = require("../utils.js");
 
 const router = Router();
 
-let rutaProd = join(__dirname, "..", "data", "productos.json");
+//let rutaProd = join(__dirname, "..", "data", "productos.json");
 
-const pm = new ProductManager(rutaProd);
+const pm = new ProductManager(rutaProds);
 
 router.get("/", (req, res) => {
   let { limit } = req.query;
@@ -47,12 +48,14 @@ router.get("/:id", (req, res) => {
 router.post("/", (req, res) => {
   let { title, description, price, thumbnail, stock, code } = req.body;
 
-  if (!title || !description || !thumbnail || !price || !stock || !code) {
+  if (!title || !description  || !price || !stock || !code) {
     res.setHeader("Content-Type", "application/json");
     return res.status(400).json({ error: `Debe completar todos los campos` });
   }
 
   let nuevoproducto = pm.addProduct(req.body);
+
+  req.io.emit("nuevoProducto", nuevoproducto)
 
   res.setHeader("Content-Type", "application/json");
   res.status(201).json({ nuevoproducto });

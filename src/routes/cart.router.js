@@ -2,9 +2,12 @@
 const Router = require("express").Router;
 //import { CartManager } from "../managers/cart-manager.js";
 const CartManager = require("../managers/cart-manager.js");
+const { join } = require("path");
+
 
 const cartRouter = Router();
-const cartManager = new CartManager("../data/carts.json");
+let rutaCart = join(__dirname, "..", "data", "cart.json");
+const cartManager = new CartManager(rutaCart);
 
 
 
