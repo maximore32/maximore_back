@@ -15,7 +15,7 @@ class ProductManager {
     return getDatos(this.ruta);
   }
 
-  addProduct(title, description, price, thumbnail, stock, code) {
+  addProduct({title, description, price, thumbnail, stock, code} ) {
     //if(!title || !description || !price || !thumbnail||!stock || !code){
     //console.log("Debe completar todos los campos!!!!")
     //return
