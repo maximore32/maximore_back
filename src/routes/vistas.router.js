@@ -16,4 +16,15 @@ router.get('/home',(req,res)=>{
         allprods
     })    
 })
+
+router.get('/realTimeProducts',(req,res)=>{
+
+    let prodsrTime=  pm.getProducts();
+
+    res.status(200).render("realTimeProducts",
+    {
+        prodsrTime
+    })    
+})
+
 module.exports =router;

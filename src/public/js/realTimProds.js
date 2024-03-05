@@ -1,4 +1,5 @@
 const socket=io()
+alert("hola")
 
 socket.on("nuevoProducto", data=>{
     console.log(data)

@@ -23,17 +23,19 @@ class ProductManager {
 
     let prods = this.getProducts();
 
-    let id = 1;
-    if (prods.length > 0) {
-      id = prods[prods.length - 1].id + 1;
-    }
-
     let existe = prods.find((codigo) => codigo.code === code);
 
     if (existe) {
       console.log(`El producto con el codigo ${code} ya esta registrado`);
       return;
     }
+
+    let id = 1;
+    if (prods.length > 0) {
+      id = prods[prods.length - 1].id + 1;
+    }
+
+    
 
     let nuevoproduct = {
       id,
@@ -84,7 +86,7 @@ class ProductManager {
       productos.splice(index, 1);
 
       fs.writeFileSync(this.ruta, JSON.stringify(productos, null, 4));
-      return "producto eliminado correctamente";
+      return console.error("producto eliminado correctamente");
     } else {
       console.error(`No se encuentran productos con el id ${id}`);
     }

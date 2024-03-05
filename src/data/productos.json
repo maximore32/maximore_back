@@ -1,48 +1,47 @@
 [
-     {
-          "id": 1,
-          "code": "ABC123",
-          "title": "Zapatillas",
-          "description": "zapatillas para corredores",
-          "price": 100,
-          "thumbnail": "imagen",
-          "stock": 200
-     },
-     {
-          "id": 2,
-          "code": "ABC999999",
-          "title": "Ventilador Nuevo",
-          "description": "Ventilador de tipo industrial grande",
-          "price": 300,
-          "thumbnail": "imagen",
-          "stock": 120
-     },
-     {
-          "id": 3,
-          "code": "ABC323",
-          "title": "Heladera",
-          "description": "Heladera de tipo industrial",
-          "price": 3000,
-          "thumbnail": "imagen",
-          "stock": 120
-     },
-     {
-          "id": 5,
-          "code": "ABC125",
-          "title": "Zapatillas",
-          "description": "zapatillas para corredores",
-          "price": 100,
-          "thumbnail": "imagen",
-          "stock": 200
-     },
-     {
-          "id": 6,
-          "code": "ABC623",
-          "title": "Mesa",
-          "description": "Mesa rectangular de roble",
-          "price": 300,
-          "thumbnail": "imagen",
-          "stock": 120
-     }
-     
+    {
+        "id": 1,
+        "code": "ABC123",
+        "title": "Zapatillas",
+        "description": "zapatillas para corredores",
+        "price": 100,
+        "thumbnail": "imagen",
+        "stock": 200
+    },
+    {
+        "id": 2,
+        "code": "ABC999999",
+        "title": "Ventilador Nuevo",
+        "description": "Ventilador de tipo industrial grande",
+        "price": 300,
+        "thumbnail": "imagen",
+        "stock": 120
+    },
+    {
+        "id": 3,
+        "code": "ABC323",
+        "title": "Heladera",
+        "description": "Heladera de tipo industrial",
+        "price": 3000,
+        "thumbnail": "imagen",
+        "stock": 120
+    },
+    {
+        "id": 5,
+        "code": "ABC125",
+        "title": "Zapatillas",
+        "description": "zapatillas para corredores",
+        "price": 100,
+        "thumbnail": "imagen",
+        "stock": 200
+    },
+    {
+        "id": 6,
+        "code": "ABC623",
+        "title": "Mesa",
+        "description": "Mesa rectangular de roble",
+        "price": 300,
+        "thumbnail": "imagen",
+        "stock": 120
+    }
 ]
